@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Koirarotujen galleria</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+    <body style="background-color: #F5EFE6;">
+
+    <!-- SIVUN OTSIKKO -->
+    <div class="p-5 text-white text-center" style="background-color: #5B4636;">
+    <h1>KOIRAROTUJEN GALLERIA</h1>
+    </div>
+
+
+    <!-- NAVIGAATIO -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#etusivu">Etusivu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#koirarodut">Koirarodut</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tietoa">Tietoa</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SIVUN SISALTO -->
+    <div class="container mt-5">
+
+        <!-- ETUSIVU -->
+<section id="etusivu" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+                <h2>Tervetuloa koiragalleriaan!</h2>
+
+                <p class="lead">
+                    Tutustu erilaisiin koirarotuihin ja katso kuvia
+                    koirista.
+                </p>
+
+                <p>
+                    Koirarotuja on monenlaisia, ja niillä on erilaisia
+                    ominaisuuksia ja ulkonäköjä. Tällä sivulla voit
+                    tutustua muutamaan rotuun ja hakea niistä kuvia.
+                </p>
+
+                <a href="#koirarodut" class="btn text-white"
+                   style="background-color: #A47148;">
+                    Tutustu koiriin
+                </a>
+            </div>
+
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <h3 class="h5">Löydä uusi suosikkisi</h3>
+                    <p class="mb-0">
+                        Valitse rotu alempana ja katso siitä satunnainen kuva.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- KOIRAROTUJEN ESITTELY -->
+<section class="py-5">
+    <div class="container">
+
+        <h2 class="text-center mb-4">Tutustu koirarotuihin</h2>
+
+        <div class="row g-4">
+
+            <!-- KORTTI 1 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Labradorinnoutaja</h3>
+                        <p class="card-text">
+                            Labradorinnoutaja on ystävällinen ja
+                            aktiivinen koira, joka sopii monenlaisiin
+                            koteihin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KORTTI 2 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Husky</h3>
+                        <p class="card-text">
+                            Husky tunnetaan energisyydestään,
+                            paksusta turkistaan ja sinisistä silmistään.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KORTTI 3 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Beagle</h3>
+                        <p class="card-text">
+                            Beagle on utelias ja seurallinen
+                            koira, jolla on vahva hajuaisti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- KOIRAROTUJEN HAKU -->
+        <div id="koirarodut" class="mt-5">
+            <h2>ETSI KOIRAROTU</h2>
+
+           <label for="rotu" class="form-label">
+            Valitse koirarotu:
+            </label>
+<select id="rotu" class="form-select mb-3">
+    <option value="labrador">Labradorinnoutaja</option>
+    <option value="husky">Husky</option>
+    <option value="pug">Mopsi</option>
+    <option value="beagle">Beagle</option>
+    <option value="dachshund">Mäyräkoira</option>
+    <option value="poodle">Villakoira</option>
+    <option value="corgi">Corgi</option>
+    <option value="dalmatian">Dalmatialainen</option>
+    <option value="doberman">Dobermanni</option>
+    <option value="shiba">Shiba</option>
+</select>
+
+            <button class="btn text-white" style="background-color: #A47148;" onclick="haeKoira()">
+                Näytä koira
+            </button>
+
+            <div id="vastaus" class="mt-4"></div>
+        </div>
+
+<!-- TIETOA SIVUSTOSTA -->
+<section id="tietoa" class="mt-5 mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- TEKSTI -->
+            <div class="col-lg-6">
+                <h2>TIETOA SIVUSTOSTA</h2>
+
+                <p>
+                    Tämän sivuston aiheena ovat koirarodut ja niiden kuvat.
+                    Sivustolla voi valita eri koirarotuja ja katsoa niistä
+                    satunnaisia kuvia.
+                </p>
+
+                <p>
+                Koirarodut eroavat toisistaan esimerkiksi koon, luonteen ja liikunnan tarpeen perusteella.
+                Jotkut koirat ovat aktiivisia ja tarvitsevat paljon tekemistä, 
+                kun taas toiset voivat olla rauhallisempia.
+                </p>
+            </div>
+            <!-- KOIRAKUVA -->
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <img
+                    src="koira.jpg"
+                    class="img-fluid rounded"
+                    alt="Koira ulkona"
+                >
+            </div>
+
+        </div>
+    </div>
+</section>
+</div>
+    <!-- FOOTER -->
+    <div class="mt-5 p-4 text-white text-center" style="background-color: #5B4636;">
+    <p>Koirarotujen galleria</p>
+    </div>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- KOIRAKUVAN HAKEMINEN JSON -->
+    <script>
+        function haeKoira() {
+            let rotu = document.getElementById("rotu").value;
+
+            fetch("https://dog.ceo/api/breed/" + rotu + "/images/random")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+    document.getElementById("vastaus").innerHTML =
+        '<div class="card p-3" style="max-width: 500px;">' +
+        '<img src="' + data.message + '" class="img-fluid rounded" style="max-height: 400px; object-fit: contain;" alt="Kuva valitusta koirarodusta">' +
+        '</div>';
+                });
+        }
+    </script>
+
+
+</body>
+</html>
